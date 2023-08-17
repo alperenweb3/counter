@@ -11,7 +11,11 @@ function App() {
   return (
     <>
       <h1>Counter</h1>
-      <p>Counter is {count}</p>
+      {count === 0 ? (
+        <p>Counter is 0. You cannot decrease anymore.</p>
+      ) : (
+        <p>Counter is {count}</p>
+      )}
       <div className="card">
         <button onClick={increment}>
           increase
