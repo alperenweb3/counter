@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <h1>Counter</h1>
+      <h1>Counter with Custom Hook</h1>
       {count === 0 ? (
         <p>Counter is 0. You cannot decrease anymore.</p>
       ) : (
