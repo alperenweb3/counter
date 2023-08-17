@@ -7,11 +7,18 @@ import './App.css'
 function App() {
   // Dont forget to use {} instead of [] in custom hooks
   const {count, increment, decrement} = useCounter()
+  const isMultipleOfTen = count !== 0 && count % 10 === 0;
+
 
   return (
     <>
       <h1>Counter with Custom Hook</h1>
-      {count === 0 ? (
+      {isMultipleOfTen ? (
+        <div>
+          <h2>Woow, Congratulations!!!</h2>
+          <p>Counter is {count} multiple of 10</p>
+        </div>
+      ): count === 0 ? (
         <p>Counter is 0. You cannot decrease anymore.</p>
       ) : (
         <p>Counter is {count}</p>
